@@ -1,0 +1,131 @@
+What is SafePlatinum ?
+
+SafePlatinum is a Safelink Template For Blogger Platform with Easy Setting, i am created this template on 30th august 2017 (my birthday) and published on 7th september 2017. if you like this template please Donate for appreciate me.
+Features
+
+Using Crypto JS 
+Ads Slot in Article
+Ads Slot in Top and Bottom on Button Visit Link
+Setting Ads From Layout (With Custom Setting)
+Responsive Template
+Random Generate Link (When Refresh)
+Auto Safelink With Random Link (When Refresh)
+Installation
+
+Before using this template dont forget for backup template
+Visit blogger.com
+signin blogger
+When in dashboard go to theme
+click edit HTML button
+Delete all code on blogger editor template
+copy all safeplatinum code which was previously downloaded
+Paste on blogger editor template
+When done paste, click save theme button
+Setting Generate Page
+
+to generate links manually, you follow the way below
+first go to the blogger dashboard
+go to the pages menu and click the new page
+click html mode
+then fill in with the code below
+
+<script type="text/javascript" src='https://min.gitcdn.link/repo/zenorocha/clipboard.js/master/dist/clipboard.min.js'></script>
+<input tabindex="1" autofocus='' class="custom" placeholder="http://example.com" type="url" pattern="https?://.+" required='' id="safeurlencode" onkeyup="safeurlencode()" onchange="safeurlencode()" />
+<textarea  onclick="this.select()" onfocus="this.select()" id='safeurlencodesuccess' class='custom' placeholder='Result Safe Platinum' tabindex='2'></textarea>  
+<button class="copytoclipboard custom" id="copytoclipboard" data-clipboard-action="copy" data-clipboard-target="#safeurlencodesuccess"><span class='fa fa-floppy-o'></span> Copy URL</button>
+<script type="text/javascript">
+var clipboard = new Clipboard('.copytoclipboard');
+clipboard.on('success', function(e) {
+$("copytoclipboard").innerHTML = "Link Copied to Clipboard";
+}); 
+</script>
+
+After completing you have to publish the page
+generate-link
+Setting Generate Link
+
+to generate the link you are required to create an article, how to make it follow the steps below
+first go to the blogger dashboard
+go to the posts and click the new post
+as usual make your articles are required to write a few words and do not forget to give the title
+After completing the write you have to publish the article
+Setting Ads Code
+
+for setting ad code follow the steps below
+first go to the blogger dashboard
+go to layout in it you will see some widgets among them
+blog posts : to bring up posting articles
+ads link top : ads that appear above the button visit
+ads link bottom : ads that appear under the button visit
+ads article [1] : ads running in position 1 articles
+ads article [2] : ads running in position 2 articles
+pages : setting for link on footer
+ad block : plugin to detect ad block
+once you understand the function of the widget you can install the html-shaped ad code by clicking the pencil button on the widget
+if you press the pencil button it will appear a popup that serves to enter the ad code as well as setting the position of the ad
+must be considered in this code you should not remove the setting code so that the ads appear you are only required to replace the post put the ad here with the ad code you have (see picture below)
+if you have replaced the writing with the ad code do not forget to save it by clicking the save button
+
+Setting Ads Layout
+
+for setting the location of the ad is intended only for ads that are in the article, so the code below is only on the widget ads article [1] and ads article [2]
+first go to the blogger dashboard
+go to layout then click one of pencil button on widget (ads article [1] or ads article [2])
+after that you see the code right under the ad code
+the code to setting is as below:
+
+<script type='text/javascript'>
+var setting = {
+set: value,
+tag: value,
+numtag: value,
+element: value,
+target: value,
+optional: value;
+};
+</script>
+
+The above code explanation is as follows
+set : there are two options before or after used to move the element before or after
+tag : target html to move ads
+numtag : target html tags (make sure the content is not mistaken for ads to appear)
+element : id element attribute to be moved
+target : id element attribute that will be the destination
+optional : ad position if not found option is beforeend (before element) afterend (after element)
+Setting Auto SafeLink for Main Blog
+
+to set auto safelink you are required to enter the code to change all the links in your blog to lead to safelink blogs that have been made, there are 2 ways to add this code through the layout or theme, use one of them
+First Way
+first way
+go to the layout then add a gadget
+add HTML / Javascript
+then fill in with the code below
+
+<script type="text/javascript">
+var settingplatinum = {
+exceptionurl : "google.com,twitter.com"
+}
+</script>
+<script type="text/javascript" src="https://rawgit.com/irfaanprogrammer/safeplatinum/master/Auto_New.js"></script>
+<script src="https://www.blogger.com/feeds/5911586401633596264/posts/default?alt=json-in-script&max-results=150&callback=showurl"></script>
+
+change the 5911586401633596264 with blogid safeplatinum you
+if you using Template_Crypto_Encode.xml change Auto_New with Auto_New_Crpyo
+then click the save button
+Secondary Way
+second way
+go to the theme then click the edit html button
+after that input the code below just above the code </head>
+
+<script type="text/javascript">
+var settingplatinum = {
+exceptionurl : "google.com,twitter.com"
+}
+</script>
+<script type="text/javascript" src="https://rawgit.com/irfaanprogrammer/safeplatinum/master/Auto_New.js"></script>
+<script src="https://www.blogger.com/feeds/5911586401633596264/posts/default?alt=json-in-script&max-results=150&callback=showurl"></script>
+
+change the 5911586401633596264 with blogid safeplatinum you
+if you using Template_Crypto_Encode.xml change Auto_New with Auto_New_Crpyo
+then click save
+to make sure the autosafelink code is working you can immediately check the blog whether each url will lead safelink blog that you have created or not, if it does not mean the code is wrong.
